@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.repetitionfx.HelloController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="-5.0" prefHeight="408.0" prefWidth="609.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Registrera en person ">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="52.0" layoutY="100.0" text="Förnamn">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="52.0" layoutY="145.0" text="Efternamn">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="52.0" layoutY="55.0" text="Födelsedatum">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="52.0" layoutY="190.0" text="Adress">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="52.0" layoutY="235.0" text="Telefonnummer">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="lastnameTextfield" layoutX="188.0" layoutY="145.0" maxWidth="185.5" prefHeight="26.0" prefWidth="185.0" />
+                        <TextField fx:id="firstnameTextField" layoutX="188.0" layoutY="100.0" maxWidth="185.5" prefHeight="26.0" prefWidth="202.0" />
+                        <TextField fx:id="adressTextfield" layoutX="188.0" layoutY="190.0" maxWidth="185.5" prefHeight="26.0" prefWidth="229.0" />
+                        <TextField fx:id="phonenumberTextfield" layoutX="188.0" layoutY="235.0" maxWidth="185.5" prefHeight="26.0" prefWidth="222.0" />
+                        <Button fx:id="registerButton" layoutX="52.0" layoutY="303.0" mnemonicParsing="false" onAction="#registerUserOnAction" prefHeight="26.0" prefWidth="322.0" text="Registrera" />
+                        <DatePicker fx:id="datepickerField" layoutX="188.0" layoutY="55.0" />
+                        <Label fx:id="registerMessage" alignment="CENTER" layoutX="52.0" layoutY="268.0" prefHeight="17.0" prefWidth="322.0" textFill="RED" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Personregister">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="34.0" layoutY="26.0" text="Sök:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchPhonenumberTextfield" layoutX="77.0" layoutY="25.0" prefHeight="26.0" prefWidth="112.0" promptText="tel. 0720000000" />
+                        <TableView fx:id="resultUserTable" layoutX="25.0" layoutY="84.0" prefHeight="234.0" prefWidth="424.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Förnamn" />
+                            <TableColumn prefWidth="75.0" text="Efternamn" />
+                              <TableColumn prefWidth="75.0" text="Adress" />
+                              <TableColumn prefWidth="95.0" text="Födelsedatum" />
+                              <TableColumn prefWidth="105.0" text="Telefonnummer" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
